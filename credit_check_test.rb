@@ -24,8 +24,8 @@ require './lib/credit_check'
     assert_equal [3, 8, 5, 0, 5, 4, 7,14, 4, 10, 3, 14, 9, 4, 9, 8], credit_check.every_other_digit
   end
 
-  def sum_of_it_all
+  def test_sum_of_it_all
     credit_check = CreditCheck.new ("4929735477250543")
-    assert_equal "This number is valid!", num,sum_it_all
+    assert_equal "This number is valid!", credit_check.sum_of_it_all
   end
 end

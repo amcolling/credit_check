@@ -27,7 +27,7 @@ end
 
 
   def sum_of_it_all
-    over_ten = every_other_digit.map do|num|
+    over_ten = every_other_digit.map do |num|
     if num.digits.sum % 10 == 0
     puts "This number is valid!"
   else
