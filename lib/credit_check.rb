@@ -21,21 +21,32 @@ attr_reader :credit_card_number,
       else
       digit
     end
+    end
   end
-end
 
-
-
-  def sum_of_it_all
-    over_ten = every_other_digit.map do |num|
-    if num.digits.sum % 10 == 0
-    puts "This number is valid!"
-  else
-    puts "This number is not valid!"
+  def add_digits_over_ten
+  every_other_digit do |digit|
+    if digit > 9
+      digit.array.sum
+    else
+      digit
     end
   end
   end
+
+
+  def sum_of_it_all
+    add_digits_over_ten do |num|
+    if num.sum % 10 == 0
+      num.values_at
+    puts "This number is valid!"
+    else
+    puts "This number is not valid!"
+    end
+  end
 end
+end
+
 
 
 
